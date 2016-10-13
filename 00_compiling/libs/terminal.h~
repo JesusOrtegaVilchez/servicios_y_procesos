@@ -1,0 +1,14 @@
+#ifndef __VECTORES_H__
+#define __VECTORES_H__
+#ifdef __cpluplus
+#include "general.h"
+extern "C"{
+#endif
+
+extern void int suma(int resultado[dim],int op1[DIM],int op2[DIM])[DIM];
+#ifndef __cplusplus
+
+}
+#endif
+#endif 
+
