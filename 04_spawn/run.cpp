@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <sys/wait.h>
+
 
 int spawn(char* program, char** argv)
 {
@@ -24,9 +26,12 @@ int main(int argc, char *argv[])
 {
     /*Spawn a child process running the "ls" command. Ignore the 
      * returned child process ID. */
+   int salida;
     spawn("ls",argv);
     printf("done woth main program\n");
+    wait(&salida);
+    printf("Game over\n");
 
-    return EXIT_SUCCESS;
+    return 0;
 
 }

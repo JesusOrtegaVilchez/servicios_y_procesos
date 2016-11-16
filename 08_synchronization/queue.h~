@@ -1,0 +1,23 @@
+#ifndef __queue_h__
+#define __queue_h__
+#define NMAX 0x100
+#define QMAX 0x100
+typedef struct TProduct{
+    char name[MAX];
+    int id;
+    double price;
+    double off;
+}Product;
+typedef struct TQueue{
+    int data[QMAX];
+    int init;
+    int summit;
+}Queue;
+
+extern "C"{
+        extern void init(Queue *q);
+        extern void push(Queue *q, Product p);
+        extern Product shift(Queue *p);
+
+}
+#endif
